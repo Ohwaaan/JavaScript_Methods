@@ -25,7 +25,14 @@ Array.prototype.myMap = function(callbackFn) {
   
   // INCLUDES //
   Array.prototype.myIncludes = function(searchElement) {
-    // Place your code here.
+    
+    isThere = false;
+    for (i = 0; i < this.length; i++) {
+      if(searchElement === this[i]){
+        isThere = true;
+      }
+    }
+    return isThere;
   };
   
   // INDEXOF //
@@ -47,3 +54,10 @@ Array.prototype.myMap = function(callbackFn) {
   Object.myValues = function(object) {
     // Place your code here.
   };
+
+  /*//----testing for myIncludes
+  myArr = [1,2,3,4,5];
+  console.log('piss')
+
+  console.log(myArr.myIncludes(1))
+  */
