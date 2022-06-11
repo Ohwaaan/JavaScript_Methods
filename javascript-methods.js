@@ -37,7 +37,13 @@ Array.prototype.myMap = function(callbackFn) {
   
   // INDEXOF //
   Array.prototype.myIndexOf = function(searchElement) {
-    // Place your code here.
+    
+    for(i = 0; i < this.length; i++){
+      if(searchElement === this[i]){
+        return i;
+      }
+    }
+    return -1
   };
   
   // LASTINDEXOF //
@@ -55,9 +61,10 @@ Array.prototype.myMap = function(callbackFn) {
     // Place your code here.
   };
 
-  /*//----testing for myIncludes
-  myArr = [1,2,3,4,5];
+  //----testing for myIncludes
+  myArr = [32,1,32,2,4];
   console.log('piss')
 
-  console.log(myArr.myIncludes(1))
-  */
+  console.log(myArr.myIncludes(12))
+  console.log(myArr.myIndexOf(32))
+  
