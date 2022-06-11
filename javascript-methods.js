@@ -48,7 +48,13 @@ Array.prototype.myMap = function(callbackFn) {
   
   // LASTINDEXOF //
   Array.prototype.myLastIndexOf = function(searchElement) {
-    // Place your code here.
+    
+    for(i = this.length; i > 0; i--){
+      if(searchElement === this[i]){
+        return i;
+      }
+    }
+    return -1
   };
   
   // KEYS //
@@ -62,9 +68,11 @@ Array.prototype.myMap = function(callbackFn) {
   };
 
   /*//----testing for myIncludes
-  myArr = [32,1,32,2,4];
+  myArr = [100,32,1,32,2,4];
   console.log('piss')
 
   console.log(myArr.myIncludes(12))
   console.log(myArr.myIndexOf(32))
+  console.log(myArr.myLastIndexOf(32))
   */
+  
