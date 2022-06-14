@@ -67,9 +67,9 @@ Array.prototype.myMap = function(callbackFn) {
     // Place your code here.
   };
 
-  /*//----testing for myIncludes
+  /*//----testing for myIncludes, myIndexOf, myLastIndexOf
   myArr = [100,32,1,32,2,4];
-  console.log('piss')
+
 
   console.log(myArr.myIncludes(12))
   console.log(myArr.myIndexOf(32))
