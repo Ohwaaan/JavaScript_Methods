@@ -1,6 +1,12 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-    // Place your code here.
+  array = []
+    for (let i = 0; i < this.length; i++) { 
+      if (this[i] === undefined) continue;
+      array.push(callbackFn(this[i]))
+    }
+    return array
+
   };
   
   // FILTER //
@@ -84,5 +90,11 @@ Array.prototype.myMap = function(callbackFn) {
   console.log(myArr.myIncludes(12))
   console.log(myArr.myIndexOf(32))
   console.log(myArr.myLastIndexOf(32))
+  */
+
+  // Test for myMap //
+  /* myArr = [100,32,1,32,2,4];
+   map1 = myArr.myMap(x => x * 2);
+   console.log(map1);
   */
   
