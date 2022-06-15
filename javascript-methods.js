@@ -104,12 +104,9 @@ Array.prototype.myMap = function(callbackFn) {
    console.log(map1);
   */
 
-
 // Test for mySome //
 /* const even = (element) => element % 3 === 0;
 myArr = [13,23,9,43,53,47];
 console.log(myArr.mySome(even))
 */
-
-
   
