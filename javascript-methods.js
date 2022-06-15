@@ -1,7 +1,12 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-    // Place your code here.
-  };
+  array = []
+    for (let i = 0; i < this.length; i++) { 
+      if (this[i] === undefined) continue;
+      array.push(callbackFn(this[i]))
+    }
+    return array
+  }; 
   
   // FILTER //
   Array.prototype.myFilter = function(callbackFn) {
@@ -25,36 +30,17 @@ Array.prototype.myMap = function(callbackFn) {
   
   // INCLUDES //
   Array.prototype.myIncludes = function(searchElement) {
-    
-    isThere = false;
-    for (i = 0; i < this.length; i++) {
-      if(searchElement === this[i]){
-        isThere = true;
-      }
-    }
-    return isThere;
+    // Place your code here.
   };
   
   // INDEXOF //
   Array.prototype.myIndexOf = function(searchElement) {
-    
-    for(i = 0; i < this.length; i++){
-      if(searchElement === this[i]){
-        return i;
-      }
-    }
-    return -1
+    // Place your code here.
   };
   
   // LASTINDEXOF //
   Array.prototype.myLastIndexOf = function(searchElement) {
-    
-    for(i = this.length; i > 0; i--){
-      if(searchElement === this[i]){
-        return i;
-      }
-    }
-    return -1
+    // Place your code here.
   };
   
   // KEYS //
@@ -67,12 +53,10 @@ Array.prototype.myMap = function(callbackFn) {
     // Place your code here.
   };
 
-  /*//----testing for myIncludes, myIndexOf, myLastIndexOf
-  myArr = [100,32,1,32,2,4];
+  // Test for myMap //
+  // myArr = [100,32,1,32,2,4];
+  // map1 = myArr.myMap(x => x * 2);
+  // console.log(map1);
 
 
-  console.log(myArr.myIncludes(12))
-  console.log(myArr.myIndexOf(32))
-  console.log(myArr.myLastIndexOf(32))
-  */
   
