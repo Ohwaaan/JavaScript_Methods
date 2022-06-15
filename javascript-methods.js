@@ -1,6 +1,12 @@
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-    // Place your code here.
+  array = []
+    for (let i = 0; i < this.length; i++) { 
+      if (this[i] === undefined) continue;
+      array.push(callbackFn(this[i]))
+    }
+    return array
+
   };
   
   // FILTER //
@@ -10,7 +16,13 @@ Array.prototype.myMap = function(callbackFn) {
   
   // SOME //
   Array.prototype.mySome = function(callbackFn) {
-    // Place your code here.
+    for (let i = 0; i < this.length; i++) { 
+      if (this[i] === undefined) continue;
+      if (callbackFn(this[i]) === true) { 
+        return true
+      }
+    }
+    return false  
   };
   
   // EVERY //
@@ -85,4 +97,19 @@ Array.prototype.myMap = function(callbackFn) {
   console.log(myArr.myIndexOf(32))
   console.log(myArr.myLastIndexOf(32))
   */
+
+  // Test for myMap //
+  /* myArr = [100,32,1,32,2,4];
+   map1 = myArr.myMap(x => x * 2);
+   console.log(map1);
+  */
+
+
+// Test for mySome //
+/* const even = (element) => element % 3 === 0;
+myArr = [13,23,9,43,53,47];
+console.log(myArr.mySome(even))
+*/
+
+
   
