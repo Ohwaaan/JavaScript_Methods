@@ -69,7 +69,12 @@ Array.prototype.myMap = function(callbackFn) {
   
   // VALUES //
   Object.myValues = function(object) {
-    // Place your code here.
+    const arr_value = []
+    for(let i in object)
+    {
+      arr_value.push(object[i])
+    }
+    return arr_value
   };
 
   /*//----testing for myIncludes, myIndexOf, myLastIndexOf
