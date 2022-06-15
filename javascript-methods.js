@@ -5,7 +5,14 @@ Array.prototype.myMap = function(callbackFn) {
   
   // FILTER //
   Array.prototype.myFilter = function(callbackFn) {
-    // Place your code here.
+    const arr_filt = []
+
+    for(let x = 0; x < this.length; x++){
+      if (callbackFn[x]){
+        arr_filt.push(this[x]);
+      }
+    }
+    return arr_filt
   };
   
   // SOME //
@@ -15,12 +22,13 @@ Array.prototype.myMap = function(callbackFn) {
   
   // EVERY //
   Array.prototype.myEvery = function(callbackFn) {
-    // Place your code here.
+    itEvery = false;
+    for ()
   };
   
   // REDUCE //
   Array.prototype.myReduce = function(callbackFn) {
-    // Place your code here.
+    
   };
   
   // INCLUDES //
@@ -76,3 +84,8 @@ Array.prototype.myMap = function(callbackFn) {
   console.log(myArr.myLastIndexOf(32))
   */
   
+  //Test for myFilter//
+  /* const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const map1 = words.myFilter(word => word.length > 6);
+
+console.log(words); */
