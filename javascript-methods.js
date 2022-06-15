@@ -59,7 +59,12 @@ Array.prototype.myMap = function(callbackFn) {
   
   // KEYS //
   Object.myKeys = function(object) {
-    // Place your code here.
+    const arr_key = []
+    for(let i in object)
+    {
+      arr_key.push(i)
+    }
+    return arr_key
   };
   
   // VALUES //
