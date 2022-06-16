@@ -48,7 +48,8 @@ Array.prototype.myMap = function(callbackFn) {
   Array.prototype.myReduce = function(callbackFn) {
     sum = 0;
     for (let i = 0; i < this.length; i++){
-      sum = sum + (callbackFn(this[i]));
+      prev = callbackFn(this[i]);
+      sum = (sum + prev);
     }
     return sum
   };
