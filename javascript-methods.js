@@ -50,7 +50,7 @@ Array.prototype.myMap = function(callbackFn) {
     for (let i = 0; i < this.length; i++){
       sum = sum + (callbackFn(this[i]));
     }
-    return sum;
+    return sum
   };
   
   // INCLUDES //
@@ -62,7 +62,7 @@ Array.prototype.myMap = function(callbackFn) {
         isThere = true;
       }
     }
-    return isThere;
+    return isThere
   };
   
   // INDEXOF //
