@@ -3,7 +3,7 @@ Array.prototype.myMap = function(callbackFn) {
   array = []
     for (let i = 0; i < this.length; i++) { 
       if (this[i] === undefined) continue;
-      array.push(callbackFn(this[i]))
+      array.push(callbackFn(this[i], i, this))
     }
     return array
 
@@ -25,7 +25,7 @@ Array.prototype.myMap = function(callbackFn) {
   Array.prototype.mySome = function(callbackFn) {
     for (let i = 0; i < this.length; i++) { 
       if (this[i] === undefined) continue;
-      if (callbackFn(this[i]) === true) { 
+      if (callbackFn(this[i], i, this) === true) { 
         return true
       }
     }
@@ -115,25 +115,15 @@ Array.prototype.myMap = function(callbackFn) {
   console.log(myArr.myIndexOf(32))
   console.log(myArr.myLastIndexOf(32))
   */
-<<<<<<< HEAD
   
   //Test for myFilter//
   /* const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 const map1 = words.myFilter(word => word.length > 6);
 
 console.log(words); */
-=======
 
-  // Test for myMap //
-  /* myArr = [100,32,1,32,2,4];
-   map1 = myArr.myMap(x => x * 2);
-   console.log(map1);
-  */
+//Test for mySome //
+// const even = (element) => element % 3 === 0;
+// myArr = [13,23,9,43,53,47];
+// console.log(myArr.mySome(even))
 
-// Test for mySome //
-/* const even = (element) => element % 3 === 0;
-myArr = [13,23,9,43,53,47];
-console.log(myArr.mySome(even))
-*/
-  
->>>>>>> d98c4397882480b3f357f047dbe84dec09a638c0
