@@ -35,12 +35,22 @@ Array.prototype.myMap = function(callbackFn) {
   // EVERY //
   Array.prototype.myEvery = function(callbackFn) {
     itEvery = false;
-    for ()
+    for (let i = 0; i < this.length; i++){
+      if (this[i] == undefined) continue;
+      if (callbackFn(this[i]) == true){
+        itEvery = true;
+      }
+    }
+    return itEvery
   };
   
   // REDUCE //
   Array.prototype.myReduce = function(callbackFn) {
-    
+    sum = 0;
+    for (let i = 0; i < this.length; i++){
+      sum = sum + (callbackFn(this[i]));
+    }
+    return sum;
   };
   
   // INCLUDES //
